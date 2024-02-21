@@ -1,0 +1,71 @@
+#contenedor {
+    text-align: center;
+}
+
+.parte-cuerpo {
+    width: 2px;
+    height: 80px;
+    background-color: #000;
+    position: absolute;
+    display: none;
+}
+
+#horca {
+    width: 150px;
+    height: 2px;
+    background-color: #000;
+    position: relative;
+    margin: 0 auto;
+}
+
+#palabra {
+    font-size: 24px;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+#intentos {
+    font-size: 18px;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out;
+    
+}
+
+#teclado {
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+#resultado {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+#reiniciar {
+    font-size: 18px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes slideIn {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(0); }
+}

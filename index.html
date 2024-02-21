@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego del Ahorcado</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="img/ahorcado.jpg" type="image/x-icon">
+</head>
+<body>
+    <div id="contenedor">
+        <div id="palabra"></div>
+        <div id="intentos">Intentos restantes: <span id="num-intentos">6</span></div>
+        <p>Pista: Tiene que ver con los lenguajes de programación.</p>
+        <div id="teclado"></div>
+        <div id="resultado"></div>
+        <button id="reiniciar" style="display:none;">Reiniciar</button>
+        <div id="horca">
+            <div id="cabeza" class="parte-cuerpo"></div>
+            <div id="tronco" class="parte-cuerpo"></div>
+            <div id="brazo-izquierdo" class="parte-cuerpo"></div>
+            <div id="brazo-derecho" class="parte-cuerpo"></div>
+            <div id="pierna-izquierda" class="parte-cuerpo"></div>
+            <div id="pierna-derecha" class="parte-cuerpo"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
