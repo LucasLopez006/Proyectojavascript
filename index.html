@@ -6,24 +6,35 @@
     <title>Juego del Ahorcado</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="shortcut icon" href="img/ahorcado.jpg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="contenedor">
-        <div id="palabra"></div>
-        <div id="intentos">Intentos restantes: <span id="num-intentos">6</span></div>
-        <p>Pista: Tiene que ver con los lenguajes de programación.</p>
-        <div id="teclado"></div>
-        <div id="resultado"></div>
-        <button id="reiniciar" style="display:none;">Reiniciar</button>
-        <div id="horca">
-            <div id="cabeza" class="parte-cuerpo"></div>
-            <div id="tronco" class="parte-cuerpo"></div>
-            <div id="brazo-izquierdo" class="parte-cuerpo"></div>
-            <div id="brazo-derecho" class="parte-cuerpo"></div>
-            <div id="pierna-izquierda" class="parte-cuerpo"></div>
-            <div id="pierna-derecha" class="parte-cuerpo"></div>
+
+    <header>
+        <img src="img/Logoempresa.png" alt="Logo de la web" class="logo-web">
+        <h1 class="title">|Inicio|</h1>
+        <ul>
+            <li>
+                <a href=""></a>
+                <a href=""></a>
+                <a href=""></a>
+                <a href=""></a>
+            </li>
+        </ul>
+    </header>
+    <main>
+        <div class="contenedor">
+            <div id="palabra"></div>
+            <div id="intentos">Intentos restantes: <span id="num-intentos">6</span></div>
+            <p>Pista: Tiene que ver con los lenguajes de programación.</p>
+            <div id="teclado"></div>
+            <div id="resultado"></div>
+            <button id="reiniciar" style="display:none;">Reiniciar</button>
+            <br>
         </div>
-    </div>
+    </main>
     <script src="script.js"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-const palabras = ["javascript", "programacion", "html", "css", "desarrollo"];
+const palabras = ["javascript", "programacion", "html", "css", "desarrollo", "php", "python", "sql", "Ruby"];
 let palabraSecreta = palabras[Math.floor(Math.random() * palabras.length)];
 let palabraDescubierta = Array(palabraSecreta.length).fill("_");
 let intentos = 6;
@@ -44,7 +44,13 @@ function reiniciarJuego() {
     document.getElementById("resultado").textContent = "";
     document.getElementById("reiniciar").style.display = "none";
     inicializarTeclado();
+
+    const botonReinicio = document.getElementById("reiniciar");
+    const horca = document.getElementById("horca");
+    horca.parentNode.insertBefore(botonReinicio, horca.nextSibling);
 }
+
+
 
 function inicializarTeclado() {
     const teclado = document.getElementById("teclado");
