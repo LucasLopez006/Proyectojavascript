@@ -6,23 +6,15 @@
 } 
 
 /* Estilo de colores para las páginas */
-header{
-    background-color: #007c52;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-height: 100px;
-}
 
 body{
-    background-color: #012d21;
+    background-color: #222831;
 }
 
 main {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 70vh; 
 }
 
 .contenedor {
@@ -31,44 +23,110 @@ main {
 
 /* Estilo para el header */
 
+header{
+    background-color: #31363F;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-height: 100px;
+    padding: 2rem;
+}
+
+nav ul {
+    display: flex;
+    gap: 1rem;
+}
+
+ul, li {
+    font-family: Fredoka;
+    list-style: none;
+}
+
+
+a {
+    text-decoration: none;
+    padding: 8px 10px;
+    border-radius: 10px;
+    color: #dfedee;
+}
+
+a:hover{
+    color: #4e888c;
+    font-size: 18px;
+    transition: 0.5s;
+}
+
 .logo-web{
     max-width: 90px;
     padding: 15px;
+    cursor: help;
 }
 
-.title{
+.title-ahr {
     font-family: Fredoka;
-    color: #ebfef4;
+    color: #dcdcdc;
     font-size: 2rem;
+    cursor: default;
+    margin-left: 250px; 
+    text-align: center; 
 }
 
-/* Estilo de cosas para el main */
+.title {
+    font-family: Fredoka;
+    color: #dcdcdc;
+    font-size: 2rem;
+    cursor: default;
+}
+
+
+/* Inicio */
+
+div{
+    padding-top: 50px;
+    display: flex;
+    width: 600px;
+    height: 430px;
+    padding-left: 120px;
+}
+
+div img{
+    width: 380px;
+    flex-grow: 1;
+    opacity: .8;
+    transition: .5s ease;
+    border-radius: 15px;
+}
+
+div img:hover{
+    cursor: hand;
+    width: 420px;
+    opacity: 1;
+    filter: contrast(120%);
+}
+
+
+/* Ahorcado */
+
+
 
 .contenedor {
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
-
-.parte-cuerpo {
-    width: 2px;
-    height: 80px;
-    background-color: #000;
-    position: absolute;
-    display: none;
+    padding-top: 170px;
 }
 
 #horca {
     width: 250px;
     height: 2px;
-    background-color: #a4f6cc;
+    background-color: #76ABAE;
     position: relative;
     margin: 0 auto;
 }
 
 p{
     font-family: Roboto Condensed;
-    color: #a4f6cc;
+    color: #76ABAE;
 }
 
 #palabra {
@@ -76,7 +134,7 @@ p{
     margin-bottom: 20px;
     animation: fadeIn 1s ease-in-out;
     font-family: Fredoka;
-    color: #a4f6cc;
+    color: #76ABAE;
 }
 
 #intentos {
@@ -84,7 +142,7 @@ p{
     margin-bottom: 20px;
     animation: fadeIn 1s ease-in-out;
     font-family: Fredoka;
-    color: #a4f6cc
+    color: #76ABAE
 }
 
 #teclado {
@@ -97,8 +155,9 @@ p{
 #teclado button {
     font-size: 18px;
     padding: 10px 20px;
-    margin: 5px; 
-    color: #012d21; 
+    margin: 5px;
+    background-color: #292929; 
+    color: #76ABAE; 
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -107,8 +166,8 @@ p{
 }
 
 #teclado button:hover{
-    background-color: #007c52;
-    color: #a4f6cc;
+    background-color: #76ABAE;
+    color: #EEEEEE;
     transition: 0.7s;
 }
 
@@ -119,13 +178,13 @@ p{
     animation-duration: 1s;
     animation-timing-function: ease-in-out;
     font-family: Fredoka;
-    color: #007c52;
+    color: #EEEEEE;
 }
 
 #reiniciar {
     font-size: 18px;
     padding: 20px;
-    background-color: #ebfef4;
+    background-color: #989898;
     color: #012d21;
     border: none;
     border-radius: 20px;
@@ -135,7 +194,7 @@ p{
 }
 
 #reiniciar:hover{
-    background-color: #007c52;
+    background-color: #76ABAE;
     color: #a4f6cc;
     transition: 0.7s;
 }
@@ -154,3 +213,4 @@ p{
     0% { transform: translateY(-100%); }
     100% { transform: translateY(0); }
 }
+
