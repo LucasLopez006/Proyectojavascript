@@ -1,4 +1,4 @@
-const palabras = ["javascript", "programacion", "html", "css", "desarrollo", "php", "python", "sql", "ruby", "django", "react", "angular", "flask", "fastapi"];
+const palabras = ["javascript", "programacion", "html", "css", "desarrollo", "php", "python", "sql", "ruby", "django", "react", "angular", "flask", "fastapi", "java", "rust", "perl", "swift"];
 let palabraSecreta = palabras[Math.floor(Math.random() * palabras.length)];
 let palabraDescubierta = Array(palabraSecreta.length).fill("_");
 let intentos = 6;
