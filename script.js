@@ -10,69 +10,30 @@ function mostrarPalabra() {
 }
 
 function actualizarIntentos() {
-    document.getElementById("num-intentos").textContent = intentos;
-}
-
-function verificarLetra(letra) {
-    if (!juegoTerminado && !letrasPresionadas.includes(letra)) { 
-        letrasPresionadas.push(letra); 
-
-        if (palabraSecreta.includes(letra)) {
-            for (let i = 0; i < palabraSecreta.length; i++) {
-                if (palabraSecreta[i] === letra) {
-                    palabraDescubierta[i] = letra;
-                }
-            }
-            if (!palabraDescubierta.includes("_")) {
-                document.getElementById("resultado").textContent = "¡Ganaste!";
-                document.getElementById("reiniciar").style.display = "block";
-                document.getElementById("reiniciar").addEventListener("click", reiniciarJuego);
-                juegoTerminado = true;
-            }
-        } else {
-            intentos--;
-            if (intentos === 0) {
-                document.getElementById("resultado").textContent = "¡Perdiste! La palabra era: " + palabraSecreta;
-                document.getElementById("reiniciar").style.display = "block";
-                document.getElementById("reiniciar").addEventListener("click", reiniciarJuego);
-                juegoTerminado = true;
-            }
-        }
-    }
-
-    mostrarPalabra();
-    actualizarIntentos();
-}
-
-function reiniciarJuego() {
-    palabraSecreta = palabras[Math.floor(Math.random() * palabras.length)];
-    palabraDescubierta = Array(palabraSecreta.length).fill("_");
-    intentos = 6;
-    letrasPresionadas = []; 
-    juegoTerminado = false; 
-    mostrarPalabra();
-    actualizarIntentos();
-    document.getElementById("resultado").textContent = "";
-    document.getElementById("reiniciar").style.display = "none";
-    inicializarTeclado();
-
-    const botonReinicio = document.getElementById("reiniciar");
-    const horca = document.getElementById("horca");
-    horca.parentNode.insertBefore(botonReinicio, horca.nextSibling);
-}
-
-function inicializarTeclado() {
-    const teclado = document.getElementById("teclado");
-    teclado.innerHTML = '';
-    for (let letra of "abcdefghijklmnopqrstuvwxyz") {
-        const boton = document.createElement("button");
-        boton.textContent = letra;
-        boton.classList.add("tecla");
-        boton.addEventListener("click", function() {
-            verificarLetra(letra);
-            this.disabled = true;
-        });
-        teclado.appendChild(boton);
+    const numIntentosElement = document.getElementById("num-intentos");
+    numIntentosElement.textContent = intentos;
+    
+    switch(intentos) {
+        case 6:
+            numIntentosElement.style.color = "#4EA93B";
+            break;
+        case 5:
+            numIntentosElement.style.color = "#86b124";
+            break;
+        case 4:
+            numIntentosElement.style.color = "#FFFF00";
+            break;
+        case 3:
+            numIntentosElement.style.color = "#FFA201";
+            break;
+        case 2:
+            numIntentosElement.style.color = "#FF6000";
+            break;
+        case 1:
+            numIntentosElement.style.color = "#FF0000";
+            break;
+        default:
+            numIntentosElement.style.color = "#FF0000"; 
     }
 }
 
@@ -114,6 +75,37 @@ function verificarLetra(letra) {
     }
 }
 
+function reiniciarJuego() {
+    palabraSecreta = palabras[Math.floor(Math.random() * palabras.length)];
+    palabraDescubierta = Array(palabraSecreta.length).fill("_");
+    intentos = 6;
+    letrasPresionadas = []; 
+    juegoTerminado = false; 
+    mostrarPalabra();
+    actualizarIntentos();
+    document.getElementById("resultado").textContent = "";
+    document.getElementById("reiniciar").style.display = "none";
+    inicializarTeclado();
+
+    const botonReinicio = document.getElementById("reiniciar");
+    const horca = document.getElementById("horca");
+    horca.parentNode.insertBefore(botonReinicio, horca.nextSibling);
+}
+
+function inicializarTeclado() {
+    const teclado = document.getElementById("teclado");
+    teclado.innerHTML = '';
+    for (let letra of "abcdefghijklmnopqrstuvwxyz") {
+        const boton = document.createElement("button");
+        boton.textContent = letra;
+        boton.classList.add("tecla");
+        boton.addEventListener("click", function() {
+            verificarLetra(letra);
+            this.disabled = true;
+        });
+        teclado.appendChild(boton);
+    }
+}
 
 function inicializarJuego() {
     mostrarPalabra();

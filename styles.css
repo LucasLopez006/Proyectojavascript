@@ -116,21 +116,23 @@ div img:hover{
     padding-top: 170px;
 }
 
-#horca {
-    width: 250px;
-    height: 2px;
-    background-color: #76ABAE;
-    position: relative;
-    margin: 0 auto;
+p{
+    font-size: 18px;
+    font-family: Roboto Condensed;
+    color: #a4f6cc;
 }
 
-p{
-    font-family: Roboto Condensed;
-    color: #76ABAE;
+.tecla.correcta {
+    background-color: #4EA93B; 
 }
+
+.tecla.incorrecta {
+    background-color: #FF0000;
+}
+
 
 #palabra {
-    font-size: 24px;
+    font-size: 26px;
     margin-bottom: 20px;
     animation: fadeIn 1s ease-in-out;
     font-family: Fredoka;
@@ -138,7 +140,7 @@ p{
 }
 
 #intentos {
-    font-size: 18px;
+    font-size: 22px;
     margin-bottom: 20px;
     animation: fadeIn 1s ease-in-out;
     font-family: Fredoka;
@@ -153,9 +155,9 @@ p{
 }
 
 #teclado button {
-    font-size: 18px;
+    font-size: 22px;
     padding: 10px 20px;
-    margin: 5px;
+    margin: 7px;
     background-color: #292929; 
     color: #76ABAE; 
     border: none;
@@ -182,21 +184,23 @@ p{
 }
 
 #reiniciar {
-    font-size: 18px;
-    padding: 20px;
+    font-size: 22px;
+    padding: 10px 30px;
+    margin: 0 auto;
+    display: block;
     background-color: #989898;
     color: #012d21;
     border: none;
     border-radius: 20px;
     cursor: pointer;
-    animation: fadeIn 1s ease-in-out;
     font-family: Fredoka;
 }
 
 #reiniciar:hover{
     background-color: #76ABAE;
     color: #a4f6cc;
-    transition: 0.7s;
+    transition: 1s;
+    font-size: 26px;
 }
 
 @keyframes fadeIn {
