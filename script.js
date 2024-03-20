@@ -13,42 +13,22 @@ function actualizarIntentos() {
     const numIntentosElement = document.getElementById("num-intentos");
     numIntentosElement.textContent = intentos;
     
-    switch(intentos) {
-        case 6:
-            numIntentosElement.style.color = "#4EA93B";
-            break;
-        case 5:
-            numIntentosElement.style.color = "#86b124";
-            break;
-        case 4:
-            numIntentosElement.style.color = "#FFFF00";
-            break;
-        case 3:
-            numIntentosElement.style.color = "#FFA201";
-            break;
-        case 2:
-            numIntentosElement.style.color = "#FF6000";
-            break;
-        case 1:
-            numIntentosElement.style.color = "#FF0000";
-            break;
-        default:
-            numIntentosElement.style.color = "#FF0000"; 
-    }
+    const colores = ["#FF0000", "#FF6000", "#FFA201", "#FFFF00", "#86b124", "#4EA93B"];
+    numIntentosElement.style.color = colores[Math.max(0, intentos - 1)];
 }
 
 function verificarLetra(letra) {
     if (!juegoTerminado && !letrasPresionadas.includes(letra)) { 
         letrasPresionadas.push(letra); 
 
-        if (palabraSecreta.includes(letra)) {
-            for (let i = 0; i < palabraSecreta.length; i++) {
-                if (palabraSecreta[i] === letra) {
-                    palabraDescubierta[i] = letra;
-                }
-            }
+        const encontradas = palabraSecreta.split('').map((char, index) => char === letra ? index : -1).filter(index => index !== -1);
+
+        if (encontradas.length > 0) {
+            encontradas.forEach(index => palabraDescubierta[index] = letra);
+
             if (!palabraDescubierta.includes("_")) {
                 document.getElementById("resultado").textContent = "¡Ganaste!";
+                document.getElementById("resultado").style.color = "#3c8d2c";
                 document.getElementById("reiniciar").style.display = "block";
                 document.getElementById("reiniciar").addEventListener("click", reiniciarJuego);
                 juegoTerminado = true;
@@ -57,6 +37,7 @@ function verificarLetra(letra) {
             intentos--;
             if (intentos === 0) {
                 document.getElementById("resultado").textContent = "¡Perdiste! La palabra era: " + palabraSecreta;
+                document.getElementById("resultado").style.color = "#9b111e";
                 document.getElementById("reiniciar").style.display = "block";
                 document.getElementById("reiniciar").addEventListener("click", reiniciarJuego);
                 juegoTerminado = true;
