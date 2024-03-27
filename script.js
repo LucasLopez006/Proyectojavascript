@@ -1,4 +1,26 @@
-const palabras = ["javascript", "programacion", "html", "css", "desarrollo", "php", "python", "sql", "ruby", "django", "react", "angular", "flask", "fastapi", "java", "rust", "perl", "swift"];
+const palabrasConPistas = {
+    "javascript": "Pista: Es un lenguaje de programación para páginas web interactivas",
+    "programacion": "Pista: Es un conjunto de instrucciones que realiza una computadora",
+    "html": "Pista: Es un lenguaje de marcado para crear páginas web",
+    "css": "Pista: Es un lenguaje de estilos para dar formato a páginas web",
+    "desarrollo": "Pista: Es un proceso de crear software o aplicaciones",
+    "php": "Pista: Es un lenguaje de programación popular para desarrollo web",
+    "python": "Pista: Es un lenguaje de programación versátil y fácil de aprender",
+    "sql": "Pista: Es un lenguaje de consulta estructurado para bases de datos",
+    "ruby": "Pista: Es un lenguaje de programación interpretado y de alto nivel",
+    "django": "Pista: Es un framework de desarrollo web en Python",
+    "react": "Pista: Es una biblioteca de JavaScript para construir interfaces de usuario",
+    "angular": "Pista: Es un framework de JavaScript para construir aplicaciones web",
+    "flask": "Pista: Es un framework ligero de Python para desarrollo web",
+    "fastapi": "Pista: Es un ramework de Python para construir APIs rápidas",
+    "java": "Pista: Es un lenguaje de programación orientado a objetos",
+    "rust": "Pista: Es un lenguaje de programación de sistemas de alto rendimiento",
+    "perl": "Pista: Es un lenguaje de programación multiparadigma",
+    "swift": "Pista: Es un lenguaje de programación de Apple para iOS y macOS"
+};
+
+const palabras = Object.keys(palabrasConPistas);
+
 let palabraSecreta = palabras[Math.floor(Math.random() * palabras.length)];
 let palabraDescubierta = Array(palabraSecreta.length).fill("_");
 let intentos = 6;
@@ -7,6 +29,10 @@ let juegoTerminado = false;
 
 function mostrarPalabra() {
     document.getElementById("palabra").textContent = palabraDescubierta.join(" ");
+}
+
+function mostrarPista(palabra) {
+    document.getElementById("pista-texto").textContent = palabrasConPistas[palabra];
 }
 
 function actualizarIntentos() {
@@ -63,6 +89,7 @@ function reiniciarJuego() {
     letrasPresionadas = []; 
     juegoTerminado = false; 
     mostrarPalabra();
+    mostrarPista(palabraSecreta); 
     actualizarIntentos();
     document.getElementById("resultado").textContent = "";
     document.getElementById("reiniciar").style.display = "none";
@@ -90,13 +117,14 @@ function inicializarTeclado() {
 
 function inicializarJuego() {
     mostrarPalabra();
+    mostrarPista(palabraSecreta); 
     actualizarIntentos();
     inicializarTeclado();
 
     document.addEventListener("keydown", function(event) {
         if (!juegoTerminado) {
             const teclaPresionada = event.key.toLowerCase();
-            if (/^[a-zñ]$/.test(teclaPresionada)) {
+            if (/^[a-z]$/.test(teclaPresionada)) {
                 verificarLetra(teclaPresionada);
                 const boton = document.querySelector(`.tecla:nth-child(${teclaPresionada.charCodeAt(0) - 96})`);
                 if (boton) {

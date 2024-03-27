@@ -1,34 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WebGames</title>
-    <link rel="stylesheet" href="/styles.css">
-    <link rel="shortcut icon" href="./img/logodeweb.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="/styles/ppt.css">
+    <link rel="shortcut icon" href="/img/weblogo.jpg" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header>
-        <img src="../img/Logoempresa.png" alt="Logo de la web" title="logo de la empresa" class="logo-web">
-        <h1 class="title">|Piedra Papel o Tijeras|</h1>
+<header>
+    <img src="../img/Logoempresa.png" alt="Logo de la web" title="logo de la empresa" class="logo-web">
+    <h1 class="title">|Piedra Papel o Tijeras|</h1>
+    <nav>
         <ul>
             <li><a href="../index.html">Inicio</a></li>
             <li><a href="./ahorcado.html">Ahorcado</a></li>
             <li><a href="./tateti.html">Tateti</a></li>
         </ul>
-    </header>
+    </nav>
+</header>
 
 <main>
-
+    <section id="contenedor">
+        <section id="player">
+            <h2>Tú movimiento</h2>
+            <div class="choices">
+                <button id="piedra">Piedra</button>
+                <button id="papel">Papel</button>
+                <button id="tijeras">Tijeras</button>
+            </div>
+        </section>
+        <section id="result"></section>
+        <section id="computer">
+            <h2>Computadora</h2>
+            <p id="computer-choice"></p>
+        </section>
+    </section>
+    <div><button id="restart">Reinicio</button></div>
 </main>
 
 <footer>
-
+    <p>&copy; 2024 | Sitio web creado por Lucas López, todos los derechos reservados.</p>
 </footer>
+
+<script src="/js/ppt.js"></script>
 
 </body>
 </html>

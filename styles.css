@@ -21,7 +21,7 @@ main {
     text-align: center; 
 }
 
-/* Estilo para el header */
+/* Estilo para el header y footer */
 
 header{
     background-color: #31363F;
@@ -78,7 +78,20 @@ a:hover{
     cursor: default;
 }
 
+footer {
+    background-color: #31363F;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
 
+footer, p {
+    font-family: Fredoka;
+    color: #4e888c;
+}
 /* Inicio */
 
 div{
@@ -99,15 +112,13 @@ div img{
 
 div img:hover{
     cursor: hand;
-    width: 420px;
+    width: 400px;
     opacity: 1;
     filter: contrast(120%);
 }
 
 
 /* Ahorcado */
-
-
 
 .contenedor {
     display: flex;
@@ -116,11 +127,12 @@ div img:hover{
     padding-top: 170px;
 }
 
-p{
-    font-size: 18px;
-    font-family: Roboto Condensed;
+#pista-texto {
+    font-size: 1.5rem;
     color: #a4f6cc;
+    font-family: Roboto Condensed;
 }
+
 
 .tecla.correcta {
     background-color: #4EA93B; 

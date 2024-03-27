@@ -1,0 +1,162 @@
+/* Reseteo de margenes */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+
+/* Estilo de colores para las páginas */
+
+body{
+    background-color: #222831;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+}
+
+.contenedor {
+    text-align: center; 
+}
+
+/* Estilo para el header y footer */
+
+header{
+    background-color: #31363F;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-height: 100px;
+    padding: 2rem;
+}
+
+nav ul {
+    display: flex;
+    gap: 1rem;
+}
+
+ul, li {
+    font-family: Fredoka;
+    list-style: none;
+}
+
+
+a {
+    text-decoration: none;
+    padding: 8px 10px;
+    border-radius: 10px;
+    color: #dfedee;
+}
+
+a:hover{
+    color: #4e888c;
+    font-size: 18px;
+    transition: 0.5s;
+}
+
+.logo-web{
+    max-width: 90px;
+    padding: 15px;
+    cursor: help;
+}
+
+.title {
+    font-family: Fredoka;
+    color: #dcdcdc;
+    font-size: 2rem;
+    cursor: default;
+}
+
+footer {
+    background-color: #31363F;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    font-family: Fredoka;
+    color: #4e888c;
+}
+
+/* Juego */
+
+#contenedor {
+    padding-top: 150px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    margin-bottom: 20px; 
+    text-align: center;
+}
+
+.choices {
+    display: flex;
+    gap: 10px;
+}
+
+#computer-choice{
+    font-size: 24px;
+    color: #76ABAE;
+    font-family: Fredoka;
+    font-weight: 400;
+}
+
+#result {
+    font-size: 24px;
+    color: #dfedee;
+    font-weight: 500;
+    font-family: Roboto Condensed;
+}
+
+#restart {
+    font-size: 18px;
+    padding: 10px 20px;
+    margin-top: 10px; 
+    background-color: #292929; 
+    color: #76ABAE; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    animation: fadeIn 1s ease-in-out;
+    font-family: Fredoka;
+}
+
+#restart:hover {
+    background-color: #76ABAE;
+    color: #EEEEEE;
+    transition: 0.7s;
+}
+
+h2{
+    font-size: 26px;
+    margin-bottom: 20px;
+    font-family: Fredoka;
+    color: #dcdcdc;
+}
+
+button {
+    font-size: 18px;
+    padding: 10px 20px;
+    margin: 7px;
+    background-color: #292929; 
+    color: #76ABAE; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    animation: fadeIn 1s ease-in-out;
+    font-family: Fredoka;
+}
+
+button:hover{
+    background-color: #76ABAE;
+    color: #EEEEEE;
+    transition: 0.7s;
+}
