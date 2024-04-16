@@ -21,6 +21,24 @@ main {
     text-align: center; 
 }
 
+/* Mediaqueries */
+
+@media screen and (min-width: 315px) and (max-width: 559px){
+
+}
+@media screen and (min-width: 560px) and (max-width: 614px){
+    
+}
+@media screen and (min-width: 615px) and (max-width: 768px){
+    
+}
+@media screen and (min-width: 769px) and (max-width: 1230px){
+    
+}
+@media screen and (min-width: 1231px) and (max-width: 1631px){
+    
+}
+@media screen and (min-width: 1632px) and (max-width: 2140px) {
 /* Estilo para el header y footer */
 
 header{
@@ -230,3 +248,4 @@ div img:hover{
     100% { transform: translateY(0); }
 }
 
+}
