@@ -112,6 +112,7 @@ main {
     #restart-btn {
         font-size: 18px;
         padding: 10px 20px;
+        margin-bottom: 100px;
         background-color: #292929; 
         color: #76ABAE; 
         border: none;
