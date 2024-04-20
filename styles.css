@@ -11,35 +11,903 @@ body{
     background-color: #222831;
 }
 
-main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .contenedor {
     text-align: center; 
 }
 
 /* Mediaqueries */
 
-@media screen and (min-width: 315px) and (max-width: 559px){
+@media screen and (min-width: 365px) and (max-width: 559px){
 
-}
-@media screen and (min-width: 560px) and (max-width: 614px){
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    header{
+        background-color: #31363F;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-height: 100px;
+        padding: 1rem;
+    }
+    
+    nav ul {
+        display: flex;
+        gap: 0.5rem;
+    }
+    
+    ul, li {
+        font-family: Fredoka;
+        list-style: none;
+        font-size: .6rem;
+    }
+    
+    
+    a {
+        text-decoration: none;
+        padding: 8px 10px;
+        border-radius: 10px;
+        color: #dfedee;
+    }
+    
+    a:hover{
+        color: #4e888c;
+        font-size: 8px;
+        transition: 0.5s;
+    }
+    
+    .logo-web{
+        max-width: 65px;
+        padding: 15px;
+        cursor: help;
+    }
+    
+    .title-ahr {
+        font-family: Fredoka;
+        color: #dcdcdc;
+        font-size: 1rem;
+        cursor: default;
+        margin-left: 50px; 
+        text-align: center; 
+    }
+    
+    .title {
+        font-family: Fredoka;
+        color: #dcdcdc;
+        font-size: 1rem;
+        cursor: default;
+    }
+    
+    footer {
+        background-color: #31363F;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+    
+    footer, p {
+        font-family: Fredoka;
+        color: #4e888c;
+    }
+    
+    /* Inicio */
+    
+    div{
+        padding-top: 50px;
+        width: 400px;
+        height: 300px;
+        padding-left: 50px;
+    }
+    
+    .imagendiv[src="img/memorama.png"] {
+        content: url("img/memoramares.png");
+        border-radius: 20px;
+        width: 300px;
+    }
+    
+    .imagendiv[src="img/mainahorcado.png"] {
+        content: url("img/ahorcadores.png");
+        border-radius: 20px;
+        width: 300px;
+    }
+    
+    .imagendiv[src="img/ppt.png"] {
+        content: url("img/pptres.png");
+        border-radius: 20px;
+        width: 300px;
+    }
+    
+    
+    
+    /* Ahorcado */
+    
+    .contenedor {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 170px;
+    }
+    
+    #pista-texto {
+        font-size: 1rem;
+        color: #a4f6cc;
+        font-family: Roboto Condensed;
+    }
+    
+    
+    .tecla.correcta {
+        background-color: #4EA93B; 
+    }
+    
+    .tecla.incorrecta {
+        background-color: #FF0000;
+    }
+    
+    
+    #palabra {
+        font-size: 22px;
+        margin-bottom: 20px;
+        animation: fadeIn 1s ease-in-out;
+        font-family: Fredoka;
+        color: #76ABAE;
+    }
+    
+    #intentos {
+        font-size: 15px;
+        margin-bottom: 20px;
+        animation: fadeIn 1s ease-in-out;
+        font-family: Fredoka;
+        color: #76ABAE
+    }
+    
+    #teclado {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 20px;
+    }
+    
+    #teclado button {
+        font-size: 18px;
+        padding: 10px 20px;
+        margin: 7px;
+        background-color: #292929; 
+        color: #76ABAE; 
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        animation: fadeIn 1s ease-in-out;
+        font-family: Fredoka;
+    }
+    
+    #teclado button:hover{
+        background-color: #76ABAE;
+        color: #EEEEEE;
+        transition: 0.7s;
+    }
+    
+    #resultado {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        animation-duration: 1s;
+        animation-timing-function: ease-in-out;
+        font-family: Fredoka;
+        color: #EEEEEE;
+    }
+    
+    #reiniciar {
+        font-size: 16px;
+        padding: 10px 30px;
+        margin: 0 auto;
+        display: block;
+        background-color: #989898;
+        color: #012d21;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        font-family: Fredoka;
+    }
+    
+    #reiniciar:hover{
+        background-color: #76ABAE;
+        color: #a4f6cc;
+        transition: 1s;
+        font-size: 24px;
+    }
+    
+    @keyframes fadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+    }
+    
+    @keyframes bounce {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-20px); }
+    }
+    
+    @keyframes slideIn {
+        0% { transform: translateY(-100%); }
+        100% { transform: translateY(0); }
+    }
     
 }
-@media screen and (min-width: 615px) and (max-width: 768px){
+@media screen and (min-width: 560px) and (max-width: 768px){
+
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    header{
+        background-color: #31363F;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-height: 100px;
+        padding: 1rem;
+    }
+    
+    nav ul {
+        display: flex;
+        gap: 0.8    rem;
+    }
+    
+    ul, li {
+        font-family: Fredoka;
+        list-style: none;
+        font-size: .8rem;
+    }
+    
+    
+    a {
+        text-decoration: none;
+        padding: 8px 10px;
+        border-radius: 10px;
+        color: #dfedee;
+    }
+    
+    a:hover{
+        color: #4e888c;
+        font-size: 12px;
+        transition: 0.5s;
+    }
+    
+    .logo-web{
+        max-width: 75px;
+        padding: 15px;
+        cursor: help;
+    }
+    
+    .title-ahr {
+        font-family: Fredoka;
+        color: #dcdcdc;
+        font-size: 1rem;
+        cursor: default;
+        margin-left: 150px; 
+        text-align: center; 
+    }
+    
+    .title {
+        font-family: Fredoka;
+        color: #dcdcdc;
+        font-size: 2rem;
+        cursor: default;
+    }
+    
+    footer {
+        background-color: #31363F;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+    
+    footer, p {
+        font-family: Fredoka;
+        color: #4e888c;
+    }
+    
+    /* Inicio */
+    
+    div{
+        padding-top: 50px;
+        width: 600px;
+        height: 430px;
+        padding-left: 50px;
+    }
+    
+    .imagendiv[src="img/memorama.png"] {
+        content: url("img/memoramares.png");
+        border-radius: 20px;
+        width: 500px;
+    }
+    
+    .imagendiv[src="img/mainahorcado.png"] {
+        content: url("img/ahorcadores.png");
+        border-radius: 20px;
+        width: 500px;
+    }
+    
+    .imagendiv[src="img/ppt.png"] {
+        content: url("img/pptres.png");
+        border-radius: 20px;
+        width: 500px;
+    }
+    
+    
+    
+    /* Ahorcado */
+    
+    .contenedor {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 170px;
+    }
+    
+    #pista-texto {
+        font-size: 1.3rem;
+        color: #a4f6cc;
+        font-family: Roboto Condensed;
+    }
+    
+    
+    .tecla.correcta {
+        background-color: #4EA93B; 
+    }
+    
+    .tecla.incorrecta {
+        background-color: #FF0000;
+    }
+    
+    
+    #palabra {
+        font-size: 26px;
+        margin-bottom: 20px;
+        animation: fadeIn 1s ease-in-out;
+        font-family: Fredoka;
+        color: #76ABAE;
+    }
+    
+    #intentos {
+        font-size: 20px;
+        margin-bottom: 20px;
+        animation: fadeIn 1s ease-in-out;
+        font-family: Fredoka;
+        color: #76ABAE
+    }
+    
+    #teclado {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 28px;
+    }
+    
+    #teclado button {
+        font-size: 20px;
+        padding: 10px 20px;
+        margin: 7px;
+        background-color: #292929; 
+        color: #76ABAE; 
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        animation: fadeIn 1s ease-in-out;
+        font-family: Fredoka;
+    }
+    
+    #teclado button:hover{
+        background-color: #76ABAE;
+        color: #EEEEEE;
+        transition: 0.7s;
+    }
+    
+    #resultado {
+        font-size: 22px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        animation-duration: 1s;
+        animation-timing-function: ease-in-out;
+        font-family: Fredoka;
+        color: #EEEEEE;
+    }
+    
+    #reiniciar {
+        font-size: 22px;
+        padding: 10px 30px;
+        margin: 0 auto;
+        display: block;
+        background-color: #989898;
+        color: #012d21;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        font-family: Fredoka;
+    }
+    
+    #reiniciar:hover{
+        background-color: #76ABAE;
+        color: #a4f6cc;
+        transition: 1s;
+        font-size: 24px;
+    }
+    
+    @keyframes fadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+    }
+    
+    @keyframes bounce {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-20px); }
+    }
+    
+    @keyframes slideIn {
+        0% { transform: translateY(-100%); }
+        100% { transform: translateY(0); }
+    }
     
 }
 @media screen and (min-width: 769px) and (max-width: 1230px){
-    
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header{
+    background-color: #31363F;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-height: 100px;
+    padding: 2rem;
+}
+
+nav ul {
+    display: flex;
+    gap: 0.8rem;
+}
+
+ul, li {
+    font-family: Fredoka;
+    list-style: none;
+}
+
+
+a {
+    text-decoration: none;
+    padding: 8px 10px;
+    border-radius: 10px;
+    color: #dfedee;
+}
+
+a:hover{
+    color: #4e888c;
+    font-size: 18px;
+    transition: 0.5s;
+}
+
+.logo-web{
+    max-width: 85px;
+    padding: 15px;
+    cursor: help;
+}
+
+.title-ahr {
+    font-family: Fredoka;
+    color: #dcdcdc;
+    font-size: 1.6rem;
+    cursor: default;
+    margin-left: 250px; 
+    text-align: center; 
+}
+
+.title {
+    font-family: Fredoka;
+    color: #dcdcdc;
+    font-size: 2rem;
+    cursor: default;
+}
+
+footer {
+    background-color: #31363F;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer, p {
+    font-family: Fredoka;
+    color: #4e888c;
+}
+
+/* Inicio */
+
+div{
+    padding-top: 50px;
+    width: 600px;
+    height: 430px;
+    padding-left: 50px;
+}
+
+.imagendiv[src="img/memorama.png"] {
+    content: url("img/memoramares.png");
+    border-radius: 20px;
+    width: 500px;
+}
+
+.imagendiv[src="img/mainahorcado.png"] {
+    content: url("img/ahorcadores.png");
+    border-radius: 20px;
+    width: 500px;
+}
+
+.imagendiv[src="img/ppt.png"] {
+    content: url("img/pptres.png");
+    border-radius: 20px;
+    width: 500px;
+}
+
+
+
+/* Ahorcado */
+
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 170px;
+}
+
+#pista-texto {
+    font-size: 1.3rem;
+    color: #a4f6cc;
+    font-family: Roboto Condensed;
+}
+
+
+.tecla.correcta {
+    background-color: #4EA93B; 
+}
+
+.tecla.incorrecta {
+    background-color: #FF0000;
+}
+
+
+#palabra {
+    font-size: 26px;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out;
+    font-family: Fredoka;
+    color: #76ABAE;
+}
+
+#intentos {
+    font-size: 20px;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out;
+    font-family: Fredoka;
+    color: #76ABAE
+}
+
+#teclado {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 28px;
+}
+
+#teclado button {
+    font-size: 20px;
+    padding: 10px 20px;
+    margin: 7px;
+    background-color: #292929; 
+    color: #76ABAE; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    animation: fadeIn 1s ease-in-out;
+    font-family: Fredoka;
+}
+
+#teclado button:hover{
+    background-color: #76ABAE;
+    color: #EEEEEE;
+    transition: 0.7s;
+}
+
+#resultado {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    font-family: Fredoka;
+    color: #EEEEEE;
+}
+
+#reiniciar {
+    font-size: 22px;
+    padding: 10px 30px;
+    margin: 0 auto;
+    display: block;
+    background-color: #989898;
+    color: #012d21;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: Fredoka;
+}
+
+#reiniciar:hover{
+    background-color: #76ABAE;
+    color: #a4f6cc;
+    transition: 1s;
+    font-size: 24px;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes slideIn {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(0); }
+}
+
 }
 @media screen and (min-width: 1231px) and (max-width: 1631px){
-    
+    /* Estilo para el header y footer */
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header{
+    background-color: #31363F;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-height: 100px;
+    padding: 2rem;
+}
+
+nav ul {
+    display: flex;
+    gap: 0.8rem;
+}
+
+ul, li {
+    font-family: Fredoka;
+    list-style: none;
+}
+
+
+a {
+    text-decoration: none;
+    padding: 8px 10px;
+    border-radius: 10px;
+    color: #dfedee;
+}
+
+a:hover{
+    color: #4e888c;
+    font-size: 18px;
+    transition: 0.5s;
+}
+
+.logo-web{
+    max-width: 90px;
+    padding: 15px;
+    cursor: help;
+}
+
+.title-ahr {
+    font-family: Fredoka;
+    color: #dcdcdc;
+    font-size: 1.8rem;
+    cursor: default;
+    margin-left: 250px; 
+    text-align: center; 
+}
+
+.title {
+    font-family: Fredoka;
+    color: #dcdcdc;
+    font-size: 1.8rem;
+    cursor: default;
+}
+
+footer {
+    background-color: #31363F;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer, p {
+    font-family: Fredoka;
+    color: #4e888c;
+}
+
+/* Inicio */
+
+div{
+    padding-top: 50px;
+    display: flex;
+    width: 600px;
+    height: 430px;
+    padding-left: 100px;
+}
+
+.imagendiv{
+    width: 280px;
+    flex-grow: 1;
+    opacity: .8;
+    transition: .5s ease;
+    border-radius: 15px;
+}
+
+.imagendiv:hover{
+    cursor: hand;
+    width: 300px;
+    opacity: 1;
+    filter: contrast(120%);
+}
+
+
+/* Ahorcado */
+
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 170px;
+}
+
+#pista-texto {
+    font-size: 1.3rem;
+    color: #a4f6cc;
+    font-family: Roboto Condensed;
+}
+
+
+.tecla.correcta {
+    background-color: #4EA93B; 
+}
+
+.tecla.incorrecta {
+    background-color: #FF0000;
+}
+
+
+#palabra {
+    font-size: 26px;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out;
+    font-family: Fredoka;
+    color: #76ABAE;
+}
+
+#intentos {
+    font-size: 20px;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out;
+    font-family: Fredoka;
+    color: #76ABAE
+}
+
+#teclado {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 28px;
+}
+
+#teclado button {
+    font-size: 20px;
+    padding: 10px 20px;
+    margin: 7px;
+    background-color: #292929; 
+    color: #76ABAE; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    animation: fadeIn 1s ease-in-out;
+    font-family: Fredoka;
+}
+
+#teclado button:hover{
+    background-color: #76ABAE;
+    color: #EEEEEE;
+    transition: 0.7s;
+}
+
+#resultado {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    font-family: Fredoka;
+    color: #EEEEEE;
+}
+
+#reiniciar {
+    font-size: 22px;
+    padding: 10px 30px;
+    margin: 0 auto;
+    display: block;
+    background-color: #989898;
+    color: #012d21;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: Fredoka;
+}
+
+#reiniciar:hover{
+    background-color: #76ABAE;
+    color: #a4f6cc;
+    transition: 1s;
+    font-size: 24px;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes slideIn {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(0); }
+}
+
 }
 @media screen and (min-width: 1632px) and (max-width: 2140px) {
 /* Estilo para el header y footer */
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 header{
     background-color: #31363F;
@@ -110,6 +978,7 @@ footer, p {
     font-family: Fredoka;
     color: #4e888c;
 }
+
 /* Inicio */
 
 div{
@@ -120,7 +989,7 @@ div{
     padding-left: 120px;
 }
 
-div img{
+.imagendiv{
     width: 380px;
     flex-grow: 1;
     opacity: .8;
@@ -128,7 +997,7 @@ div img{
     border-radius: 15px;
 }
 
-div img:hover{
+.imagendiv:hover{
     cursor: hand;
     width: 400px;
     opacity: 1;

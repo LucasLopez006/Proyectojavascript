@@ -22,8 +22,569 @@ main {
     text-align: center; 
 }
 
-/* Estilo para el header y footer */
-
+@media screen and (min-width: 365px) and (max-width: 559px){
+    header{
+        background-color: #31363F;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-height: 100px;
+        padding: 2rem;
+    }
+    
+    nav ul {
+        display: flex;
+        gap: .8rem;
+        
+    }
+    
+    ul, li {
+        font-family: Fredoka;
+        list-style: none;
+        font-size: .8rem;
+    }
+    
+    
+    a {
+        text-decoration: none;
+        padding: 8px 10px;
+        border-radius: 10px;
+        color: #dfedee;
+    }
+    
+    a:hover{
+        color: #4e888c;
+        font-size: 18px;
+        transition: 0.5s;
+    }
+    
+    .logo-web{
+        max-width: 70px;
+        padding: 15px;
+        cursor: help;
+    }
+    
+    .title {
+        font-family: Fredoka;
+        color: #dcdcdc;
+        font-size: .8rem;
+        cursor: default;
+    }
+    
+    footer {
+        background-color: #31363F;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+    
+    footer p {
+        font-family: Fredoka;
+        color: #4e888c;
+    }
+    
+    /* Juego */
+    
+    #contenedor {
+        padding-top: 150px;
+        display: grid;
+        grid-template-columns: auto;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 20px; 
+        text-align: center;
+    }
+    
+    .choices {
+        display: flex;
+        gap: 10px;
+    }
+    
+    #computer-choice{
+        font-size: 16px;
+        color: #76ABAE;
+        font-family: Fredoka;
+        font-weight: 400;
+        padding-top: 10px;
+    }
+    
+    #result {
+        font-size: 16px;
+        color: #dfedee;
+        font-weight: 500;
+        font-family: Roboto Condensed;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    
+    #restart {
+        font-size: 12px;
+        padding: 10px 20px;
+        margin-top: 10px; 
+        background-color: #292929; 
+        color: #76ABAE; 
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        animation: fadeIn 1s ease-in-out;
+        font-family: Fredoka;
+    }
+    
+    #restart:hover {
+        background-color: #76ABAE;
+        color: #EEEEEE;
+        transition: 0.7s;
+    }
+    
+    h2{
+        font-size: 20px;
+        margin-bottom: 20px;
+        font-family: Fredoka;
+        color: #dcdcdc;
+    }
+    
+    button {
+        font-size: 12px;
+        padding: 10px 20px;
+        margin: 7px;
+        background-color: #292929; 
+        color: #76ABAE; 
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        animation: fadeIn 1s ease-in-out;
+        font-family: Fredoka;
+    }
+    
+    button:hover{
+        background-color: #76ABAE;
+        color: #EEEEEE;
+        transition: 0.7s;
+    }
+}
+@media screen and (min-width: 560px) and (max-width: 614px){
+    header{
+        background-color: #31363F;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-height: 100px;
+        padding: 2rem;
+    }
+    
+    nav ul {
+        display: flex;
+        gap: 1rem;
+    }
+    
+    ul, li {
+        font-family: Fredoka;
+        list-style: none;
+    }
+    
+    
+    a {
+        text-decoration: none;
+        padding: 8px 10px;
+        border-radius: 10px;
+        color: #dfedee;
+    }
+    
+    a:hover{
+        color: #4e888c;
+        font-size: 18px;
+        transition: 0.5s;
+    }
+    
+    .logo-web{
+        max-width: 90px;
+        padding: 15px;
+        cursor: help;
+    }
+    
+    .title {
+        font-family: Fredoka;
+        color: #dcdcdc;
+        font-size: 1rem;
+        cursor: default;
+    }
+    
+    footer {
+        background-color: #31363F;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+    
+    footer p {
+        font-family: Fredoka;
+        color: #4e888c;
+    }
+    
+    /* Juego */
+    
+    #contenedor {
+        padding-top: 150px;
+        display: grid;
+        grid-template-columns: auto;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 20px; 
+        text-align: center;
+    }
+    
+    .choices {
+        display: flex;
+        gap: 10px;
+    }
+    
+    #computer-choice{
+        font-size: 16px;
+        color: #76ABAE;
+        font-family: Fredoka;
+        font-weight: 400;
+        padding-top: 10px;
+    }
+    
+    #result {
+        font-size: 16px;
+        color: #dfedee;
+        font-weight: 500;
+        font-family: Roboto Condensed;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    
+    #restart {
+        font-size: 12px;
+        padding: 10px 20px;
+        margin-top: 10px; 
+        background-color: #292929; 
+        color: #76ABAE; 
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        animation: fadeIn 1s ease-in-out;
+        font-family: Fredoka;
+    }
+    
+    #restart:hover {
+        background-color: #76ABAE;
+        color: #EEEEEE;
+        transition: 0.7s;
+    }
+    
+    h2{
+        font-size: 20px;
+        margin-bottom: 20px;
+        font-family: Fredoka;
+        color: #dcdcdc;
+    }
+    
+    button {
+        font-size: 12px;
+        padding: 10px 20px;
+        margin: 7px;
+        background-color: #292929; 
+        color: #76ABAE; 
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        animation: fadeIn 1s ease-in-out;
+        font-family: Fredoka;
+    }
+    
+    button:hover{
+        background-color: #76ABAE;
+        color: #EEEEEE;
+        transition: 0.7s;
+    }
+}
+@media screen and (min-width: 615px) and (max-width: 768px){
+    header{
+        background-color: #31363F;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-height: 100px;
+        padding: 2rem;
+    }
+    
+    nav ul {
+        display: flex;
+        gap: 1rem;
+    }
+    
+    ul, li {
+        font-family: Fredoka;
+        list-style: none;
+    }
+    
+    
+    a {
+        text-decoration: none;
+        padding: 8px 10px;
+        border-radius: 10px;
+        color: #dfedee;
+    }
+    
+    a:hover{
+        color: #4e888c;
+        font-size: 18px;
+        transition: 0.5s;
+    }
+    
+    .logo-web{
+        max-width: 90px;
+        padding: 15px;
+        cursor: help;
+    }
+    
+    .title {
+        font-family: Fredoka;
+        color: #dcdcdc;
+        font-size: 1rem;
+        cursor: default;
+    }
+    
+    footer {
+        background-color: #31363F;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+    
+    footer p {
+        font-family: Fredoka;
+        color: #4e888c;
+    }
+    
+    /* Juego */
+    
+    #contenedor {
+        padding-top: 150px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 80%;
+        margin-bottom: 20px; 
+        text-align: center;
+    }
+    
+    .choices {
+        display: flex;
+        gap: 10px;
+    }
+    
+    #computer-choice{
+        font-size: 16px;
+        color: #76ABAE;
+        font-family: Fredoka;
+        font-weight: 400;
+    }
+    
+    #result {
+        font-size: 16px;
+        color: #dfedee;
+        font-weight: 500;
+        font-family: Roboto Condensed;
+    }
+    
+    #restart {
+        font-size: 12px;
+        padding: 10px 20px;
+        margin-top: 10px; 
+        background-color: #292929; 
+        color: #76ABAE; 
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        animation: fadeIn 1s ease-in-out;
+        font-family: Fredoka;
+    }
+    
+    #restart:hover {
+        background-color: #76ABAE;
+        color: #EEEEEE;
+        transition: 0.7s;
+    }
+    
+    h2{
+        font-size: 20px;
+        margin-bottom: 20px;
+        font-family: Fredoka;
+        color: #dcdcdc;
+    }
+    
+    button {
+        font-size: 12px;
+        padding: 10px 20px;
+        margin: 7px;
+        background-color: #292929; 
+        color: #76ABAE; 
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        animation: fadeIn 1s ease-in-out;
+        font-family: Fredoka;
+    }
+    
+    button:hover{
+        background-color: #76ABAE;
+        color: #EEEEEE;
+        transition: 0.7s;
+    }
+}
+@media screen and (min-width: 769px) and (max-width: 1230px){
+    header{
+        background-color: #31363F;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-height: 100px;
+        padding: 2rem;
+    }
+    
+    nav ul {
+        display: flex;
+        gap: 1rem;
+    }
+    
+    ul, li {
+        font-family: Fredoka;
+        list-style: none;
+    }
+    
+    
+    a {
+        text-decoration: none;
+        padding: 8px 10px;
+        border-radius: 10px;
+        color: #dfedee;
+    }
+    
+    a:hover{
+        color: #4e888c;
+        font-size: 18px;
+        transition: 0.5s;
+    }
+    
+    .logo-web{
+        max-width: 90px;
+        padding: 15px;
+        cursor: help;
+    }
+    
+    .title {
+        font-family: Fredoka;
+        color: #dcdcdc;
+        font-size: 2rem;
+        cursor: default;
+    }
+    
+    footer {
+        background-color: #31363F;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+    
+    footer p {
+        font-family: Fredoka;
+        color: #4e888c;
+    }
+    
+    /* Juego */
+    
+    #contenedor {
+        padding-top: 150px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 80%;
+        margin-bottom: 20px; 
+        text-align: center;
+    }
+    
+    .choices {
+        display: flex;
+        gap: 10px;
+    }
+    
+    #computer-choice{
+        font-size: 20px;
+        color: #76ABAE;
+        font-family: Fredoka;
+        font-weight: 400;
+    }
+    
+    #result {
+        font-size: 20px;
+        color: #dfedee;
+        font-weight: 500;
+        font-family: Roboto Condensed;
+    }
+    
+    #restart {
+        font-size: 16px;
+        padding: 10px 20px;
+        margin-top: 10px; 
+        background-color: #292929; 
+        color: #76ABAE; 
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        animation: fadeIn 1s ease-in-out;
+        font-family: Fredoka;
+    }
+    
+    #restart:hover {
+        background-color: #76ABAE;
+        color: #EEEEEE;
+        transition: 0.7s;
+    }
+    
+    h2{
+        font-size: 22px;
+        margin-bottom: 20px;
+        font-family: Fredoka;
+        color: #dcdcdc;
+    }
+    
+    button {
+        font-size: 16px;
+        padding: 10px 20px;
+        margin: 7px;
+        background-color: #292929; 
+        color: #76ABAE; 
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        animation: fadeIn 1s ease-in-out;
+        font-family: Fredoka;
+    }
+    
+    button:hover{
+        background-color: #76ABAE;
+        color: #EEEEEE;
+        transition: 0.7s;
+    }
+}
+@media screen and (min-width: 1231px) and (max-width: 1631px){
 header{
     background-color: #31363F;
     display: flex;
@@ -160,3 +721,142 @@ button:hover{
     color: #EEEEEE;
     transition: 0.7s;
 }
+}
+@media screen and (min-width: 1632px) and (max-width: 2140px){
+    header{
+        background-color: #31363F;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-height: 100px;
+        padding: 2rem;
+    }
+    
+    nav ul {
+        display: flex;
+        gap: 1rem;
+    }
+    
+    ul, li {
+        font-family: Fredoka;
+        list-style: none;
+    }
+    
+    
+    a {
+        text-decoration: none;
+        padding: 8px 10px;
+        border-radius: 10px;
+        color: #dfedee;
+    }
+    
+    a:hover{
+        color: #4e888c;
+        font-size: 18px;
+        transition: 0.5s;
+    }
+    
+    .logo-web{
+        max-width: 90px;
+        padding: 15px;
+        cursor: help;
+    }
+    
+    .title {
+        font-family: Fredoka;
+        color: #dcdcdc;
+        font-size: 2rem;
+        cursor: default;
+    }
+    
+    footer {
+        background-color: #31363F;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+    
+    footer p {
+        font-family: Fredoka;
+        color: #4e888c;
+    }
+    
+    /* Juego */
+    
+    #contenedor {
+        padding-top: 150px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 80%;
+        margin-bottom: 20px; 
+        text-align: center;
+    }
+    
+    .choices {
+        display: flex;
+        gap: 10px;
+    }
+    
+    #computer-choice{
+        font-size: 24px;
+        color: #76ABAE;
+        font-family: Fredoka;
+        font-weight: 400;
+    }
+    
+    #result {
+        font-size: 24px;
+        color: #dfedee;
+        font-weight: 500;
+        font-family: Roboto Condensed;
+    }
+    
+    #restart {
+        font-size: 18px;
+        padding: 10px 20px;
+        margin-top: 10px; 
+        background-color: #292929; 
+        color: #76ABAE; 
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        animation: fadeIn 1s ease-in-out;
+        font-family: Fredoka;
+    }
+    
+    #restart:hover {
+        background-color: #76ABAE;
+        color: #EEEEEE;
+        transition: 0.7s;
+    }
+    
+    h2{
+        font-size: 26px;
+        margin-bottom: 20px;
+        font-family: Fredoka;
+        color: #dcdcdc;
+    }
+    
+    button {
+        font-size: 18px;
+        padding: 10px 20px;
+        margin: 7px;
+        background-color: #292929; 
+        color: #76ABAE; 
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        animation: fadeIn 1s ease-in-out;
+        font-family: Fredoka;
+    }
+    
+    button:hover{
+        background-color: #76ABAE;
+        color: #EEEEEE;
+        transition: 0.7s;
+    }
+    }
