@@ -219,7 +219,6 @@ main {
         color: #fff;
         text-align: center;
         padding: 10px;
-        position: fixed;
         bottom: 0;
         width: 100%;
     }
@@ -369,7 +368,6 @@ main {
         color: #fff;
         text-align: center;
         padding: 10px;
-        position: fixed;
         bottom: 0;
         width: 100%;
     }
@@ -519,7 +517,6 @@ main {
         color: #fff;
         text-align: center;
         padding: 10px;
-        position: fixed;
         bottom: 0;
         width: 100%;
     }
@@ -668,7 +665,6 @@ main {
         color: #fff;
         text-align: center;
         padding: 10px;
-        position: fixed;
         bottom: 0;
         width: 100%;
     }
@@ -815,12 +811,11 @@ a:hover{
 
 footer {
     background-color: #31363F;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+        bottom: 0;
+        width: 100%;
 }
 
 footer, p {
